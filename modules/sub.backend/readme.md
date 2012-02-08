@@ -1,5 +1,5 @@
-Creating Sub.Modules
-=========================
+Creating Sub.Modules ( Multiple Applications )
+==============================================
 
 Managing applications very easy in Obullo. You don't need to divide applications.
 Follow below the steps to creating sub modules.
@@ -28,13 +28,13 @@ Follow below the steps to creating sub modules.
 returns to FALSE.
 
 ## Tips
-- You can add sub.module route rules into `/sub.module/config/routes.php` file, database, autload, autorun,
+- You can add sub.module route rules into `/sub.module/config/routes.php` file, database, autoload, autorun,
 constants, plugins, config files are the same.
 
 ## Hmvc Requests
 - Example hmvc request to a sub module. 
     `echo request('backend/hello/test/1/2/3')->exec();`.
-- Example hmvc request to a module inside from any sub module.
+- Example hmvc request to a module from in any sub module.
     `echo request('captcha/create')->exec();`.
 
 ## CLI and Task Requests

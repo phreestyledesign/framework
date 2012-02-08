@@ -20,8 +20,8 @@ Class MY_Exception extends OB_Exception
     /**
     * Write Exceptions.
     * 
-    * @param mixed $e
-    * @param mixed $type
+    * @param object $e
+    * @param string $type
     * @return string
     */
     public function write($e, $type = '')
@@ -92,7 +92,7 @@ Class MY_Exception extends OB_Exception
         if(lib('ob/Config')->item('error_reporting') > 0)
         {
             ob_start();
-            echo lib('ob/View')->load_view(APP .'core'. DS .'errors'. DS, 'ob_exception', $data, true);
+            echo lib('ob/View')->load(APP .'core'. DS .'errors'. DS, 'ob_exception', $data, true);
             $buffer = ob_get_contents();
             ob_get_clean();  // don't close output buffering just clean it.
 

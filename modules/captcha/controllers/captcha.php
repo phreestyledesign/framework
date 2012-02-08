@@ -47,7 +47,7 @@ Class Captcha extends Controller {
         );
 
         $this->db->insert('ob_captcha', $cap_data);
-
+        
         if(i_ajax())  // Ajax support
         {
             echo json_encode(array('image' => $data['cap']['image']));

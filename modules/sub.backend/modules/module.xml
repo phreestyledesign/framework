@@ -19,8 +19,9 @@
                      Forexample you can move `e_notifier` extension to sub.backend 
                      module then you need to set this attribute ( path = "/sub.backend/" )
                      in module.xml which is located in your `/sub.backend/` folder.
-    root = ""      - Please not use, this is a hidden attribute that gives you full root path 
-                     of the extension.
+                     
+    root = ""      - Please do not use, this is a hidden attribute that gives you full root path 
+                     of the extension in php format.
 -->
 
 <root>
