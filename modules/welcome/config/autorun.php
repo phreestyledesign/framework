@@ -22,4 +22,3 @@ defined('BASE') or exit('Access Denied!');
 */
 
 $autorun['function']['sess_start']        = array();
-$autorun['function']['view_set_folder']   = array('view_layout', 'layouts');

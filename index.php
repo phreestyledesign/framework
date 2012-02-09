@@ -12,7 +12,7 @@
 | This can be set to anything, but default usage is:
 |
 |     o DEV   - Development ( Show Obullo Friendly Errors )
-|     o DEBUG - Debug Mode  ( Show Hidden Php Native Errors )
+|     o DEBUG - Debug Mode  ( Quick Debugging, Show Hidden Php Native Errors )
 |     o TEST  - Testing     ( Test mode, behaviours like DEV )
 |     o LIVE  - Production  ( Close all errors )
 |

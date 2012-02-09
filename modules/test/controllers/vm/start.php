@@ -25,7 +25,7 @@ Class Start extends Controller {
         //------ HMVC CALL -----//
         
         view_var('body', view('view_vm', $data));
-        view_layout('layout_vm'); 
+        view_inc('layouts/vm'); 
     }
     
     function ajax_example()
@@ -39,7 +39,7 @@ Class Start extends Controller {
         //------ HMVC CALL -----//
         
         view_var('body', view('view_vm_ajax', $data));
-        view_layout('layout_vm'); 
+        view_inc('layouts/vm');
     }
     
     function do_post()
@@ -75,7 +75,7 @@ Class Start extends Controller {
         }
         
         view_var('body', view('view_vm', $data));
-        view_layout('layout_vm'); 
+        view_inc('layouts/vm');
     }
     
     
