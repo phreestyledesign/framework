@@ -17,7 +17,7 @@ view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should s
                     
                     <?php echo br(); ?>
                     
-                    <code><b>sub.backend/modules/hello/views/</b><samp>layouts</samp>/layout_hello.php <kbd>( Layout )</kbd></code> 
+                    <code><b>sub.backend/modules/hello/views/</b><samp>layouts</samp>/hello.php <kbd>( Layout )</kbd></code> 
                     
                     <code><b>sub.backend/modules/hello/</b><samp>views</samp>/view_hello.php <kbd>( View )</kbd></code>
                     
@@ -33,12 +33,9 @@ view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should s
     </div> 
 
 <p>
-<?php echo br(); ?>Page rendered in {elapsed_time} seconds 
-
-<?php if(function_exists('memory_get_usage')) {?> using {memory_usage} of memory <?php } ?> <?php echo $var; ?> 
+<?php echo br(); ?>Page rendered in {elapsed_time} seconds <?php echo $var; ?> 
 <?php echo img('../welcome/gif/obullo.gif', ' border="0" '); ?>
 </p>
-    
 
 </div> 
 
