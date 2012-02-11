@@ -10,18 +10,18 @@ view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should s
 <div id="main">
     <div class="fieldset"> 
           <div class="fieldbox"> 
-               <h3 class="legend">sub.backend/modules/hello</h3> 
+               <h3 class="legend">sub.backend / modules / hello</h3> 
                <div class="inner">
                
                     <p>If you would like to edit <b>Backend Hello Module</b> you'll find files located at</p>
                     
                     <?php echo br(); ?>
                     
-                    <code><b>sub.backend/modules/hello/views/</b><samp>layouts</samp>/hello.php <kbd>( Layout )</kbd></code> 
+                    <code><b>sub.backend / modules / hello / views / </b><samp>layouts</samp> / hello.php <kbd>( Layout )</kbd></code> 
                     
-                    <code><b>sub.backend/modules/hello/</b><samp>views</samp>/view_hello.php <kbd>( View )</kbd></code>
+                    <code><b>sub.backend / modules / hello / </b><samp>views</samp> / view_hello.php <kbd>( View )</kbd></code>
                     
-                    <code><b>sub.backend/modules/hello/</b><samp>controllers</samp>/hello.php <kbd>( Controller )</kbd></code>
+                    <code><b>sub.backend / modules / hello / </b><samp>controllers</samp> / hello.php <kbd>( Controller )</kbd></code>
                    
                       <?php echo br(2);  ?>
                     

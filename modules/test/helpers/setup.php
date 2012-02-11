@@ -47,7 +47,7 @@ function check_setup()
         $db->set_attribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-    $folder = MODULES .'captcha'. DS . 'public'. DS . 'images'. DS;
+    $folder = MODULES .'captcha'. DS .config_item('public_folder'). DS . 'images'. DS;
 
     if( ! is_really_writable($folder .'index.html'))
     {

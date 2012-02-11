@@ -4,10 +4,10 @@ Class Hello extends Controller {
     
     function __construct()
     {   
-        parent::__construct(); 
+        parent::__construct();
     }         
     
-    public function index($a = '')
+    public function index()
     {
         view_var('title', 'Welcome to Obullo Backend Submodule !');
         

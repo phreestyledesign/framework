@@ -9,21 +9,19 @@ view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should s
 <div id="main">
     <div class="fieldset"> 
           <div class="fieldbox"> 
-               <h3 class="legend">modules/welcome</h3> 
+               <h3 class="legend">modules / welcome</h3> 
                <div class="inner">
                
                     <p>If you would like to edit <b>Welcome Module</b> you'll find files located at</p>
                     
                     <?php echo br(); ?>
                     
-                    <code><b>modules/welcome/views/</b><samp>layouts</samp>/welcome.php <kbd>( Layout )</kbd></code> 
+                    <code><b>modules / welcome / views / </b><samp>layouts</samp> / welcome.php <kbd>( Layout )</kbd></code> 
                     
-                    <code><b>modules/welcome/</b><samp>views</samp>/view_welcome.php <kbd>( View )</kbd></code>
+                    <code><b>modules / welcome / </b><samp>views</samp> / view_welcome.php <kbd>( View )</kbd></code>
                     
-                    <code><b>modules/welcome/</b><samp>controllers</samp>/welcome.php <kbd>( Controller )</kbd></code>
+                    <code><b>modules / welcome / </b><samp>controllers</samp> / welcome.php <kbd>( Controller )</kbd></code>
                    
-                    <code><b>modules/welcome/</b><samp>parents</samp>/Welcome_Controller.php <kbd>( Module Controller )</kbd></code>
-
                     <?php echo br();  ?>
                     
                     <div class="test"><? echo anchor('/welcome/hmvc', 'Try to New HMVC Feature'); ?></div>
@@ -42,7 +40,7 @@ view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should s
 
 <p>
 <?php echo br(); ?>Page rendered in {elapsed_time} seconds <?php echo $var; ?> 
-<?php // echo img('gif/obullo.gif', ' border="0" '); ?>
+<?php echo img('gif/obullo.gif', ' border="0" '); ?>
 </p>
 
 </div> 

@@ -6,6 +6,8 @@ Class Captcha extends Controller {
     {
         parent::__construct();
         
+        loader::helper('ob/form');
+        
         loader::database();
     }
     
@@ -23,12 +25,12 @@ Class Captcha extends Controller {
 
         $vals = array(
             'max_char'   => 5,
-            'img_path'   => MODULES.'captcha'. DS .'public'. DS .'images'. DS,
-            'img_url'    => base_url().'modules/captcha/public/images/',
-            'font_path'  => 'modules/captcha/public/fonts/FixedDisplay.ttf',
-            'font_size'  => 20,
-            'img_width'  => 100,
-            'img_height' => 30,
+            'img_path'   => MODULES.'captcha'. DS .config_item('public_folder'). DS .'images'. DS,
+            'img_url'    => base_url().'modules/captcha/'.config_item('public_folder').'/images/',
+            'font_path'  => 'modules/captcha/'.config_item('public_folder').'/fonts/AHGBold.ttf',
+            'font_size'  => 10,
+            'img_width'  => 150,
+            'img_height' => 40,
             'expiration' => 40,
             'background' => '#FFFFFF',
             'border'     => '#CCCCCC',
@@ -36,6 +38,7 @@ Class Captcha extends Controller {
             'grid'       => '#000000',
             'shadow'     => '#CCCCCC',
             'pool'       => '0123456789',
+            'points'     => '32'
         );
 
         $data['cap'] = captcha_create($vals);
@@ -53,8 +56,6 @@ Class Captcha extends Controller {
             echo json_encode(array('image' => $data['cap']['image']));
             return;
         }
-        
-        // we need return to string
         
         echo json_encode(array(
             'view' => view('view_captcha', $data['cap']),
