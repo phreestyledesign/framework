@@ -34,7 +34,7 @@ Class MY_Exception extends OB_Exception
             $ob   = this();
             $type = 'Database';
 
-            foreach(profiler_get('databases') as $db_name => $db_var)
+            foreach(loader::$_databases as $db_name => $db_var)
             {
                 if(is_object($ob->$db_var))
                 {
