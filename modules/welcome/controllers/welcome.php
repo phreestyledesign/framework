@@ -8,7 +8,7 @@ Class Welcome extends Controller {
     }         
     
     public function index()
-    {   
+    {  
         view_var('title', 'Welcome to Obullo !');
         
         log_me('debug', '[ welcome ]: Example log who want keep log files in welcome module !');

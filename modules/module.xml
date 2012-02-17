@@ -15,10 +15,10 @@
     enabled = ""   - Can take `yes` | `no` values. If value `yes` extension is enabled.
     env  = ""      - Environments, enable for different environments e.g. env = "DEV,DEBUG".
     path = "/"     - Working path default is forward slash "/".
-                     Change your extension `working path`, it can be located in a sub.module.
+                     You can change your extension `working path`, it can be located in a sub.module.
                      Forexample you can move `e_notifier` extension to sub.backend 
                      module then you need to set this attribute ( path = "/sub.backend/" )
-                     in module.xml which is located in your `/sub.backend/` folder.
+                     from module.xml which is located in your `/sub.backend/` folder.
                      
     root = ""      - Please do not use, this is a hidden attribute that gives you full root path 
                      of the extension in php format.
@@ -30,5 +30,7 @@
             <library>Exception</library>
             <helper>error</helper>
         </override>
-    </extension>
+    </extension>    
 </root>
+
+

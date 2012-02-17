@@ -149,7 +149,7 @@ else
 
 
 <p>
-    Using php <b>json_encode($user->errors);</b> function you can send response in json format, we do it with obullo form_json helper because of write less coding.<br />
+    Using php <b>json_encode($user->errors);</b> function you can send response in json format, we do it with obullo form_send helper because of write less coding.<br />
         Please look at the <b>form_send</b> helper functions you will understand well how does it work. Helper file is located <b>obullo/helpers/form_send.php</b>
 </p>
 

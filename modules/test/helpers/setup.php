@@ -27,7 +27,7 @@ function check_setup()
     }
     else
     {
-        $db = loader::database('db', false);
+        $db = loader::database('db', true);
 
         $db->set_attribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
 

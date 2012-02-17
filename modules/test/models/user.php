@@ -1,6 +1,6 @@
 <?php
   
-Class User extends VM
+Class User extends Vmodel
 {
     function __construct()
     {
@@ -12,8 +12,8 @@ Class User extends VM
           'rules' => 'trim|required|integer|min_lenght[1]|max_length[5]|callback_request[post][captcha/check]'
         );
         
-        // !! CALLBACK REQUEST : callback_request[post][/captcha/check/] rule do a hmvc request
-        // to /captcha module check method. Look at the captcha module check function.
+        // !! WHAT IS THE CALLBACK REQUEST : callback_request[post][/captcha/check/] is a rule that is do a hmvc request
+        // to /captcha module. Look at the captcha module for more details.
     }
     
     public $settings = array(
