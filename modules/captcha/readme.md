@@ -9,7 +9,7 @@ ajax or native post, and easy maintenance.
 - This module uses Hmvc libraries.
 
 ## Installation
-- Give the 777 write permission to `/modules/captcha/public/images/` folder.
+- Give the 777 write permission to `/modules/captcha/assets/images/` folder.
 - Look at Sample_Model.php in `/modules/captcha/models/` folder and copy validation 
 codes and paste to your models.
 
