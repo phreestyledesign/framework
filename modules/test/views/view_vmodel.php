@@ -81,12 +81,12 @@ label { font-weight:bold; }
     </tr>
     
     <? 
-    //----- Captcha Request View ------//
+    //----- Captcha View ------//
     
     echo view_var('head', $row->javascript);
     echo $row->view; 
     
-    //----- Captcha Request View ------//
+    //----- Captcha View ------//
     ?>
     
     <tr>
