@@ -31,7 +31,9 @@ The goal of Obullo is keep the framework maintainable, portable, easy and scalab
 ## Quick Start
 go `http://obullo.com/user_guide/en/1.0.1/getting-started.html`.
 
-  
+## HMVC Requests
+(http://upload.wikimedia.org/wikipedia/commons/b/b1/Obullo_hmvc_schema.png)
+
 ## Credits
 
 - Ersin Guvenc &lt;eguvenc at gmail.com&gt;
