@@ -4,7 +4,7 @@ Obullo: PHP5 HMVC Modular Framework
 The goal of Obullo is keep the framework maintainable, portable, easy and scalable. 
 
 ## HMVC and Modules
-[<img src="http://upload.wikimedia.org/wikipedia/commons/b/b1/Obullo_hmvc_schema.png">][Hmvc requests to modules and sub.modules]
+[<img src="http://upload.wikimedia.org/wikipedia/commons/b/b1/Obullo_hmvc_schema.png">](Hmvc requests to modules and sub.modules)
 
 ## Features
 
