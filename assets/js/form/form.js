@@ -159,8 +159,8 @@
                   }
 
                   $('.loading').hide();
-                  $('input[type=submit]', this).removeAttr('disabled');
-                  $('input[type=submit]', this).removeClass('disabled');
+                  $root.find('input[type=submit]', this).removeAttr('disabled');
+                  $root.find('input[type=submit]', this).removeClass('disabled');
 
                   settings.success.call(root, r, $root);
                   
