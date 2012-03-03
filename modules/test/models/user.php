@@ -76,16 +76,7 @@ Class User extends Vmodel
     {   
         $this->before_save();
         
-        $key = ($key == '') ? $this->item('primary_key') : $key; 
-        
-        if(is_array($val))
-        {
-            $this->db->where_in($key, $val);
-        }
-        elseif($val != '')
-        {
-            $this->db->where($key, $val);  
-        }
+        $this->auto_where($key, $val);
         
         $result = parent::save();
 
@@ -107,23 +98,7 @@ Class User extends Vmodel
     {
         $this->before_delete();
         
-        $key = ($key == '') ? $this->item('primary_key') : $key;
-        
-        if(is_array($val))
-        {
-            foreach($val as $k => $v)
-            {
-                $this->{$k} = $v;  // set data for validation
-            }
-            
-            $this->db->where_in($key, $val);
-        }
-        elseif($val != '')
-        {
-            $this->{$key} = $val;  // set data for validation
-            
-            $this->db->where($key, $val);  
-        }
+        $this->auto_where($key, $val);
         
         $result = parent::delete();
         
