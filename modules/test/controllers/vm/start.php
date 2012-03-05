@@ -84,8 +84,9 @@ Class Start extends Controller {
         loader::model('user', false);  // Include user model
         
         $user = new User();
+        $user->where('usr_id', 1);
         
-        if($user->delete('usr_id', 5))
+        if($user->delete())
         {
             echo 'User Deleted Successfuly !';
         }

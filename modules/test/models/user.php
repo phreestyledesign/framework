@@ -25,7 +25,7 @@ Class User extends Vmodel
         'usr_id' => array(
           'label' => 'ID',
           'type'  => 'int',
-          'rules' => 'trim|integer'
+          'rules' => 'trim|required|integer'
         ),
         'usr_username' => array(
          'label'  => 'Username',  // you can use lang:username
@@ -51,14 +51,13 @@ Class User extends Vmodel
         
     ));
     
-    function get($limit = '', $offset = '', $id = '')
+    function get($usr_id = '', $limit = '', $offset = '')
     {        
         $this->db->select('*');
         
-        if($id != '')
+        if($usr_id != '')
         {
-            $data = array('id' => $id);
-            parent::validator($data);  // manually validate ID field
+            parent::validator(array('usr_id' => $usr_id));  // manually validate ID field
         }
         
         return $this->db->get('users', $limit, $offset);
@@ -72,11 +71,9 @@ Class User extends Vmodel
     * 
     * @param mixed $val
     */
-    function save($key = '', $val = '')
+    function save()
     {   
         $this->before_save();
-        
-        $this->auto_where($key, $val);
         
         $result = parent::save();
 
@@ -84,25 +81,14 @@ Class User extends Vmodel
 
         return $result;
     }
-    
-    function before_delete(){}
-    function after_delete() {}
-    
+
     /**
-    * Delete
-    * 
-    * @param string $key $this->db->where($key, ); (set table field)
-    * @param string $mixed $val $this->db->where($key, $val); (set value)
+    * Do Validate and Delete
+    *
     */
-    function delete($key = '', $val = '')
+    function delete()
     {
-        $this->before_delete();
-        
-        $this->auto_where($key, $val);
-        
         $result = parent::delete();
-        
-        $this->after_delete();
         
         return $result;
     }
