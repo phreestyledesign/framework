@@ -73,13 +73,7 @@ Class User extends Vmodel
     */
     function save()
     {   
-        $this->before_save();
-        
-        $result = parent::save();
-
-        $this->after_save();
-
-        return $result;
+        return parent::save();
     }
 
     /**
@@ -88,9 +82,7 @@ Class User extends Vmodel
     */
     function delete()
     {
-        $result = parent::delete();
-        
-        return $result;
+        return parent::save();
     }
     
 }
