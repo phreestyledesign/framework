@@ -4,10 +4,6 @@
 #  C L E A R . S H  ( Clear all temporary files using one command )
 ####################
 
-# To clear all log and captcha temporary files,
-# use your terminal run below the code.
-# sh clear.sh
-
 # define your project path.
 PROJECT_DIR='/var/www/framework'
 
