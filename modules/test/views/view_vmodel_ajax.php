@@ -131,7 +131,7 @@ $user->email    = i_get_post('email');
 
 if($user->save())
 {
-    echo form_send_success('Success !');
+    echo form_send_success($user);
 } 
 else
 {

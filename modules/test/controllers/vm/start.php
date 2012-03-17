@@ -57,7 +57,7 @@ Class Start extends Controller {
         {
             if($this->uri->extension() == 'json')  // Ajax support
             {
-                echo form_send_success('Data Saved Successfully !');
+                echo form_send_success($user);
                 return;
             }
         } 

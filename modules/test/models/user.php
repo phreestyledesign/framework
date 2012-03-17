@@ -51,18 +51,6 @@ Class User extends Vmodel
         
     ));
     
-    function get($usr_id = '', $limit = '', $offset = '')
-    {        
-        $this->db->select('*');
-        
-        if($usr_id != '')
-        {
-            parent::validator(array('usr_id' => $usr_id));  // manually validate ID field
-        }
-        
-        return $this->db->get('users', $limit, $offset);
-    }
-    
     function before_save(){}
     function after_save(){}
     
