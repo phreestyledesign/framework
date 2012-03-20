@@ -8,7 +8,7 @@
  * and paste to your models.
  */
 
-Class Sample_Model extends VM
+Class Sample_Model extends Vmodel
 {
     function __construct()
     {
