@@ -17,7 +17,7 @@ view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should s
                     
                     <?php echo br(); ?>
                     
-                    <code><b>sub.backend / modules / hello / views / </b><samp>layouts</samp> / hello.php <kbd>( Layout )</kbd></code> 
+                    <code><b>sub.backend /  views / </b><samp>layouts</samp> / layout.php <kbd>( Layout )</kbd></code> 
                     
                     <code><b>sub.backend / modules / hello / </b><samp>views</samp> / view_hello.php <kbd>( View )</kbd></code>
                     
