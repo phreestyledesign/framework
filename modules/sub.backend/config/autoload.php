@@ -16,7 +16,8 @@ defined('BASE') or exit('Access Denied!');
 |
 */
 
-$autoload['helper']     = array('ob/view' => '', 'ob/html' => '', 'ob/url' => '');
+
+$autoload['helper']     = array('ob/view' => '', 'ob/html' => '', 'ob/url' => '', 'ob/form' => '');
 $autoload['lib']        = array();
 $autoload['config']     = array();
 $autoload['lang']       = array();
