@@ -6,15 +6,11 @@ Class Captcha extends Controller {
     {
         parent::__construct();
         
-        loader::helper('ob/form');
-        
         loader::database();
     }
     
     public function create()
     {
-        loader::helper('ob/captcha');
-
         $query = $this->db->query("SELECT * FROM ob_captcha WHERE ip_address ='".i_ip_address()."'");
 
         if($query->num_rows() > 10)  // Delete captchas after ten records ..

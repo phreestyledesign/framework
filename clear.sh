@@ -9,7 +9,7 @@ PROJECT_DIR='/var/www/framework'
 
 # define your paths.
 CAPTCHA_DIR="$PROJECT_DIR/modules/captcha/assets/images/"
-APP_LOG_DIR="$PROJECT_DIR/application/core/logs/"
+APP_LOG_DIR="$PROJECT_DIR/app/core/logs/"
 MOD_LOG_DIR="$PROJECT_DIR/modules/"
 
 # delete application and module directory log files.

@@ -13,7 +13,11 @@ defined('BASE') or exit('Access Denied!');
 |
 | Prototype:  ./application/config/autoload.php
 |
+| Merge Mode   : Merge module autoload variables to application.
+| Replace Mode : Replace module autoload variables and override to application.
+| 
 */
+$autoload['mode']       = 'merge'; // merge | replace
 
 $autoload['helper']     = array('ob/session' => '', 'ob/form' => '');
 $autoload['lib']        = array();

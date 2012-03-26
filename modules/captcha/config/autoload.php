@@ -3,7 +3,7 @@ defined('BASE') or exit('Access Denied!');
 
 /*
 | -------------------------------------------------------------------
-| MODULE AUTO-LOADER
+| SUBMODULE AUTO-LOADER
 | -------------------------------------------------------------------
 | This file specifies which MODULE file should be loaded by default.
 |
@@ -12,15 +12,19 @@ defined('BASE') or exit('Access Denied!');
 | you globally define which systems you would like loaded with every
 | request to current module.
 |
-| Prototype:  ./application/config/autoload.php
+| Prototype:  ./modules/sub.module/config/autoload.php
 |
 | Merge Mode   : Merge module autoload variables to application.
 | Replace Mode : Replace module autoload variables and override to application.
-| 
+|
+| NOTE: if you want to run independent module autoload files you 
+| should use replace mode ( Recommended for HMVC Modules ).
+|
 */
-$autoload['mode']       = 'merge'; // merge | replace
 
-$autoload['helper']     = array('ob/view' => '', 'ob/html' => '', 'ob/url' => '');
+$autoload['mode']       = 'replace'; // merge | replace
+
+$autoload['helper']     = array('ob/url' => '', 'ob/view' => '', 'ob/form' => '', 'ob/captcha' => '');
 $autoload['lib']        = array();
 $autoload['config']     = array();
 $autoload['lang']       = array();
@@ -28,4 +32,4 @@ $autoload['model']      = array();
 
 
 /* End of file autoload.php */
-/* Location: ./modules/default/config/autoload.php */
+/* Location: ./modules/sub.backend/config/autoload.php */
