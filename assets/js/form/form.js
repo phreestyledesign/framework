@@ -174,13 +174,9 @@
                       return;
                   }
                   
-                  if (r.success_msg)
+                  if (r.msg)
                   {
-                     if(r.view){
-                         $root.notification('success', r.success_msg, r.view);
-                     } else {
-                         $root.notification('success', r.success_msg);
-                     }
+                    $root.notification('success', r.msg);
                     
                     $('.notification.notification-success').attr("tabindex", '0').focus();
                   } 
