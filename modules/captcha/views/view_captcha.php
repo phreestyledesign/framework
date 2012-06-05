@@ -15,8 +15,8 @@
 <tr>
 <td></td>
 <td>
-    <? echo form_error('captcha_answer', '<div class="input-error">', '</div>'); ?>
-    <? echo form_input('captcha_answer', '', ' maxlength="5" id="captcha_answer"  '); ?>
+    <?php echo form_error('captcha_answer', '<div class="input-error">', '</div>'); ?>
+    <?php echo form_input('captcha_answer', '', ' maxlength="5" id="captcha_answer"  '); ?>
 </td>
 </tr>
 </tbody>

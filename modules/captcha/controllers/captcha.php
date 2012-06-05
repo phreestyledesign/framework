@@ -68,7 +68,7 @@ Class Captcha extends Controller {
     */
     public function check()
     {
-        $validator = lib('Validator');
+        $validator = lib('ob/Validator');
 
         // We use Global POST variable instead of HMVC.
         $word =  i_get_post('captcha_answer', TRUE, $use_global_var = TRUE);

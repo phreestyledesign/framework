@@ -27,7 +27,7 @@ function check_setup()
     }
     else
     {
-        $db = loader::database('db', false);
+        $db = loader::database('db', true);
 
         $db->set_attribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_SILENT);
 
@@ -47,7 +47,7 @@ function check_setup()
         $db->set_attribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-    $folder = MODULES .'captcha'. DS . 'public'. DS . 'images'. DS;
+    $folder = MODULES .'captcha'. DS . 'assets'. DS . 'images'. DS;
 
     if( ! is_really_writable($folder .'index.html'))
     {

@@ -146,10 +146,8 @@ else
 }
 
 require(BASE .'core'. DS .'Bootstrap'. EXT);
-  
+
 
 ob_include_files();
 ob_set_headers();
-
 ob_system_run();
-ob_system_close();

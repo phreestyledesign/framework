@@ -3,12 +3,13 @@ defined('BASE') or exit('Access Denied!');
 
 /*
 |--------------------------------------------------------------------------
-| SUBMODULE Routes
+| Module Default Index Method
 |--------------------------------------------------------------------------
 |
-| This is settings default routes for all this module.You should
-| configure it before the first run of your module.
+| This is controller default index method for current module
 |
 */
+$routes['backend/test']    = 'test/start';
 
-$routes['backend']       = 'hello/test';
+
+

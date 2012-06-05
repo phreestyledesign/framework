@@ -9,7 +9,7 @@ Class User extends Vmodel
         $this->settings['fields']['captcha_answer'] = array(
           'label' => 'Security Image',
           'type'  => 'string',
-          'rules' => 'trim|required|integer|min_lenght[1]|max_length[5]|callback_request[post][captcha/check]'
+          'rules' => 'trim|required|integer|min_len[1]|max_len[5]|callback_request[post][captcha/check]'
         );
         
         // !! WHAT IS THE CALLBACK REQUEST : callback_request[post][/captcha/check/] is a rule that is do a hmvc request
@@ -30,12 +30,12 @@ Class User extends Vmodel
         'usr_username' => array(
          'label'  => 'Username',  // you can use lang:username
          'type'   => 'string',
-         'rules'  => 'required|trim|unique|min_lenght[3]|max_length[100]|xss_clean'
+         'rules'  => 'required|trim|unique|min_len[3]|max_len[100]|xss_clean'
         ),
         'usr_password' => array(
           'label' => 'Password',
           'type'  => 'string',
-          'rules' => 'required|trim|min_lenght[6]|encrypt',
+          'rules' => 'required|trim|min_len[6]|encrypt',
           'func'  => 'md5'
         ),
         'usr_confirm_password' => array(

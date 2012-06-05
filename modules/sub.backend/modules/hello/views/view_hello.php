@@ -17,7 +17,7 @@ view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should s
                     
                     <?php echo br(); ?>
                     
-                    <code><b>sub.backend /  views / </b><samp>layouts</samp> / layout.php <kbd>( Layout )</kbd></code> 
+                    <code><b>sub.backend / modules / views / </b><samp>layouts</samp> / layout.php <kbd>( Layout )</kbd></code> 
                     
                     <code><b>sub.backend / modules / hello / </b><samp>views</samp> / view_hello.php <kbd>( View )</kbd></code>
                     
@@ -26,7 +26,7 @@ view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should s
                       <?php echo br(2);  ?>
                     
                     <p><b>Note:</b> If you are new to Obullo, you should start by 
-                reading the <a href="http://obullo.com/user_guide/en/<?php echo OBULLO_VERSION; ?>/index.html">User Guide</a>.</p>
+                reading the <a href="http://obullo.com/user_guide/en/1.0.1/index.html">User Guide</a>.</p>
            
               </div>
           </div> 

@@ -8,15 +8,14 @@ The goal of Obullo is keep the framework maintainable, portable, easy and scalab
 
 ## Features
 
-- Modular Programming (Modules, Extensions, SubModules and SubFolders).
-- Simple HMVC (Hierarchical Model View Controller).
+- HMVC Modular Programming (Modules and SubModules).
 - Simple Validation in Model instead of ORM.
 - Task Management and CLI Support.
 - Advanced Debugging and Error Notifiers.
 - UTF8 Libraries.
 - SSL Support, Ajax Support.
 - Nginx HTTP Server Support.
-- Lightweight and Easy to Use, Orginally based CodeIgniter.
+- Easy to Use, Orginally based CodeIgniter.
 - Well documented, It focuses on simplicity and best maintainability.
 
 

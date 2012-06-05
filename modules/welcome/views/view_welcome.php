@@ -25,14 +25,14 @@ view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should s
                     <?php echo br();  ?>
                     
                     <div class="test"><? echo anchor('/welcome/hmvc', 'Try to New HMVC Feature'); ?></div>
-                    <div class="test"><? echo anchor('/test/vm/start', 'Try to New Obullo Validation Model'); ?></div>
+                    <div class="test"><? echo anchor('/test/start', 'Try to New Obullo Validation Model'); ?></div>
                     <div class="test"><? echo anchor('/welcome/task', 'Try to New Task Feature'); ?></div>
                     <div class="test"><? echo anchor('/backend', 'Try to New Sub Modules'); ?></div>
                     
                     <?php echo br(2);  ?>
                     
                     <p><b>Note:</b> If you are new to Obullo, you should start by 
-                reading the <a href="http://obullo.com/user_guide/en/<?php echo OBULLO_VERSION; ?>/index.html">User Guide</a>.</p>
+                reading the <a href="http://obullo.com/user_guide/en/1.0.1/index.html">User Guide</a>.</p>
            
               </div>
           </div> 
