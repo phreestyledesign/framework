@@ -12,7 +12,7 @@ defined('BASE') or exit('Access Denied!');
 |
 |	$config['item'] = 'mixed value';
 */
-$config['sub_item']               = 'Sub module config item1 works !';
+$config['sub_item']               = 'Submodule test item works !';
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +30,32 @@ $config['sub_item']               = 'Sub module config item1 works !';
 |
 */
 $config['log_threshold']         = 2;
+
+/*
+|--------------------------------------------------------------------------
+| Session Variables
+|--------------------------------------------------------------------------
+|
+| 'sess_cookie_name'    = the name you want for the cookie
+| 'sess_encrypt_cookie' = TRUE/FALSE (boolean).  Whether to encrypt the cookie
+| 'sess_expiration'     = the number of SECONDS you want the session to last.
+| 'sess_die_cookie'     = If set TRUE all sessions  will destroy when the browser closed.
+|  by default sessions last 7200 seconds (two hours).  Set to zero for no expiration.
+| 'time_to_update'      = how many seconds between Obullo refreshing Session Information
+| 'sess_db_var'         = normally Obullo use standart '$this->db' variable for session database
+|                         crud operations, you can change it like db2, db3 .. 
+|
+*/
+$config['sess_cookie_name']      = 'ob_backend_session';
+$config['sess_expiration']       = 7200;
+$config['sess_die_cookie']       = FALSE;
+$config['sess_encrypt_cookie']   = TRUE;
+$config['sess_driver']           = 'native';  // cookie | database
+$config['sess_db_var']           = 'db';            
+$config['sess_table_name']       = 'ob_backend_sessions';
+$config['sess_match_ip']         = FALSE;
+$config['sess_match_useragent']  = TRUE;
+$config['sess_time_to_update']   = 300;
 
 
 /* End of file config.php */
