@@ -1,3 +1,6 @@
+php_value upload_max_filesize 30M
+php_value post_max_size 30M
+php_value memory_limit 32M
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
@@ -7,7 +10,7 @@
     #Removes access to the Obullo folder by users.
     #previously this would not have been possible.
     #'obullo' can be replaced if you have renamed your obullo folder.
-    RewriteCond %{REQUEST_URI} ^(?:application|obullo)\b.*
+    RewriteCond %{REQUEST_URI} ^(?:app|obullo)\b.*
     RewriteRule ^(.*)$ index.php/$1 [L]
 
     #Checks to see if the user is attempting to access a valid file,
@@ -18,7 +21,7 @@
     RewriteRule (.*)/assets/(.*) modules/$1/assets/$2 [L]
 
     #This last condition enables access to the images and css folders, and the robots.txt file
-    RewriteCond $1 !^(index\.php|obullo|modules|application|assets)
+    RewriteCond $1 !^(index\.php|obullo|modules|app|assets)
     RewriteRule ^(.*)$ index.php/$1 [L]
     AddType text/x-component .htc
  

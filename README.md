@@ -26,8 +26,8 @@ The goal of Obullo is keep the framework maintainable, portable, easy and scalab
 - Check your phpinfo(); `PDO` and `Pdo_yourdriver` (pdo_mysql, pdo_pgsql ..) must be installed on your host.
 - Open your browser and run Obullo e.g. `http://localhost/obullo`
 - Captcha module use the GD library, give the 777 permissions to `/modules/captcha/public/images/` folder.
-- You can change the configuration from `application/config/config.php` file. Set your application base url.
-- You can change the routes from `application/config/routes.php` file.
+- You can change the configuration from `app/config/config.php` file. Set your application base url.
+- You can change the routes from `app/config/routes.php` file.
   
   
 ## Quick Start
