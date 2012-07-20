@@ -24,8 +24,8 @@ Class Start extends Controller {
 
         //------ HMVC CALL -----//
         
-        view_var('body', view('view_vm', $data));
-        view('layouts/layout'); 
+        view_var('body', view('view_vmodel', $data));
+        view('layouts/vmodel'); 
     }
     
     function ajax_example()
@@ -38,8 +38,8 @@ Class Start extends Controller {
                 
         //------ HMVC CALL -----//
         
-        view_var('body', view('view_vm_ajax', $data));
-        view('layouts/layout'); 
+        view_var('body', view('view_vmodel_ajax', $data));
+        view('layouts/vmodel');
     }
     
     function do_post()
@@ -55,15 +55,15 @@ Class Start extends Controller {
   
         if($user->save())
         {
-            if(uri_extension() == 'json')  // Ajax support
+            if($this->uri->extension() == 'json')  // Ajax support
             {
-                echo form_send_success('Data Saved Successfully !');
+                echo form_send_success($user);
                 return;
             }
         } 
         else
         {
-            if(uri_extension() == 'json') // Ajax support 
+            if($this->uri->extension() == 'json') // Ajax support 
             {
                 echo form_send_error($user);
                 return;
@@ -74,8 +74,8 @@ Class Start extends Controller {
            $data['row'] = request('captcha/create')->decode('json')->exec();
         }
         
-        view_var('body', view('view_vm', $data));
-        view('layouts/layout'); 
+        view_var('body', view('view_vmodel', $data));
+        view('layouts/vmodel');
     }
     
     
@@ -84,15 +84,16 @@ Class Start extends Controller {
         loader::model('user', false);  // Include user model
         
         $user = new User();
+        $user->where('usr_id', 1);
         
-        if($user->delete('usr_id', 5))
+        $model->debug();  // Turn on SQL debug
+        
+        if($user->delete())
         {
             echo 'User Deleted Successfuly !';
         }
         
         print_r($user->errors());
-        
-        echo $user->last_query();
     }
     
 }

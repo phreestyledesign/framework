@@ -1,7 +1,7 @@
 #!/bin/sh
 
 ####################
-#  E X P O R T. S H  ( Export entire project, delete logs, .svn and .git files to deployment )
+#  E X P O R T. S H  ( Export entire project, delete logs, .svn and .git files to go on deployment )
 ####################
 
 # http://stackoverflow.com/questions/1371261/get-current-directory-name-without-full-path-in-bash-script
