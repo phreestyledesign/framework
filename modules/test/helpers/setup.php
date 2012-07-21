@@ -23,7 +23,8 @@ function check_setup()
     if(db_item('database', 'db') != 'obullo')
     {
         show_error('<b>SETUP ERROR</b> - Please create a test database called <b>obullo</b> 
-            and configure it from <b>/application/config/database.php</b> file.');
+            and configure it from <b>/app/config/database.php</b> file, then run the <b>test.sql</b> which is located in 
+                    your <b>/modules/test/</b> folder');
     }
     else
     {
