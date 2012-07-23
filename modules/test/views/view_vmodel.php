@@ -42,7 +42,7 @@ label { font-weight:bold; }
 <div style="padding: 10px 10px 10px 0;"><? echo anchor('/test/start', 'Validation Model (No Ajax)'); ?> | <? echo anchor('/test/start/ajax_example', 'Validation Model with Ajax'); ?></div>
 
 
-<? echo form_msg($user); ?>
+<? echo form_msg($user, '', 'notification error', 'notification success'); ?>
 
 <div>
 <? echo form_open('/test/start/do_post', array('method' => 'POST', 'class' => 'no-ajax'));?>
