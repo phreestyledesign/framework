@@ -10,6 +10,31 @@ Class Welcome extends Controller {
     public function index()
     {  
         view_var('title', 'Welcome to Obullo !');
+       
+        $auth = lib('ob/Auth');
+        $auth->select('user_username, user_password, user_active');
+        $row = $auth->get('example@gmail.com', '123456');
+        
+        // echo $this->db->last_query(true);
+        
+        if($auth->check())
+        {
+            if($row->user_active == 0)
+            {
+                echo 'Please activate your membership.';
+            }
+        }
+
+        // $auth->check('/dashboard', '/login');
+        
+        $auth = lib('ob/Auth');
+        
+        if($auth->check())
+        {
+            echo 'Great you are authorized to view this page !';
+        }
+        
+        echo $auth->data('user_username');
         
         log_me('debug', '[ welcome ]: Example log who want keep log files in welcome module !');
         
