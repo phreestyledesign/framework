@@ -86,11 +86,13 @@ Class Start extends Controller {
         $user = new User();
         $user->where('usr_id', 1);
         
-        $model->debug();  // Turn on SQL debug
-        
         if($user->delete())
         {
             echo 'User Deleted Successfuly !';
+        } 
+        else // SQL debug
+        {
+            echo $user->last_query();
         }
         
         print_r($user->errors());

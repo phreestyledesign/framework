@@ -7,7 +7,7 @@ view_var('head', css('
 .button {
     padding: 5px 10px;
     display: inline;
-    background: #777 url('.public_url('/images/png/button.png', true).') repeat-x bottom;
+    background: #777 url('.public_url('/images/button.png', true).') repeat-x bottom;
     border: none;
     color: #fff;
     cursor: pointer;

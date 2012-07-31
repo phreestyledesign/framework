@@ -39,7 +39,7 @@ label { font-weight:bold; }
 <!-- body content -->
 <h1>Welcome to Obullo Validation Model !</h1> 
 
-<div style="padding: 10px 10px 10px 0;"><? echo anchor('/test/start', 'Validation Model (No Ajax)'); ?> | <? echo anchor('/test/start/ajax_example', 'Validation Model with Ajax'); ?></div>
+<div style="padding: 10px 10px 10px 0;"><? echo anchor('/test/start', 'Validation Model'); ?> | <? echo anchor('/test/start/ajax_example', 'Validation Model ( Ajax )'); ?></div>
 
 
 <? echo form_msg($user, '', 'notification error', 'notification success'); ?>
@@ -121,34 +121,34 @@ view('layouts/vmodel'); </pre></td>
     </tr>
     <tr>
         <td><b>form_error('usr_username');</b></td>
-        <td><pre><? echo form_error('usr_username'); ?></pre></td>
+        <td><pre><?php echo form_error('usr_username'); ?></pre></td>
     </tr>
     
     <tr>
         <td><b>validation_errors();</b></td>
-        <td><pre><? echo validation_errors(' | ', ' | '); ?></pre></td>
+        <td><pre><?php echo validation_errors(' | ', ' | '); ?></pre></td>
     </tr>
     
-    <? if(is_object($user)) { ?>
+    <?php if(is_object($user)) { ?>
     
     <tr>
         <td><b>print_r($user->errors());</b></td>
-        <td><pre><? print_r($user->errors()); ?></pre></td>
+        <td><pre><?php print_r($user->errors()); ?></pre></td>
     </tr>
     
     <tr>
         <td><b>print_r($user->errors);</b></td>
-        <td><pre><? print_r($user->errors); ?></pre></td>
+        <td><pre><?php print_r($user->errors); ?></pre></td>
     </tr>
     
     <tr>
         <td><b>print_r($user->values());</b></td>
-        <td><pre><? print_r($user->values()); ?></pre></td>
+        <td><pre><?php print_r($user->values()); ?></pre></td>
     </tr>
     
     <tr>
         <td><b>print_r($user->values);</b></td>
-        <td><pre><? print_r($user->values); ?></pre></td>
+        <td><pre><?php print_r($user->values); ?></pre></td>
     </tr>
     
     <? } ?>
