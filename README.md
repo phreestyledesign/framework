@@ -29,6 +29,9 @@ The goal of Obullo is keep the framework maintainable, portable, easy and scalab
 - You can change the configuration from `app/config/config.php` file. Set your application base url.
 - You can change the routes from `app/config/routes.php` file.
   
+## Ubuntu Installation
+http://wiki.obullo.com/#setting_up_php_and_obullo_framework_under_the_ubuntu
+
   
 ## Quick Start
 go `http://obullo.com/user_guide/en/1.0.1/getting-started.html`.
