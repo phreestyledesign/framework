@@ -82,23 +82,18 @@ label { font-weight:bold; }
 <table width="100%">
     
     <tr>
-        <td style="width:20%;"><? echo form_label('Username'); ?></td>
-        <td><? echo form_input('usr_username', '', " id='username' ");?></td>
-    </tr>
-    
-    <tr>
-        <td><? echo form_label('Email'); ?></td>
-        <td><? echo form_input('usr_email', '', " id='email' ");?></td>
+        <td style="width:20%;"><? echo form_label('Email'); ?></td>
+        <td><? echo form_input('user_email', '', " id='email' ");?></td>
     </tr>
     
     <tr>
         <td><? echo form_label('Password'); ?></td>
-        <td><? echo form_password('usr_password', '', " id='password' ");?></td>
+        <td><? echo form_password('user_password', '', " id='password' ");?></td>
     </tr>
     
     <tr>
         <td><? echo form_label('Confirm'); ?></td>
-        <td><? echo form_password('usr_confirm_password', '', " id='confirm' ");?></td>
+        <td><? echo form_password('user_confirm_password', '', " id='confirm' ");?></td>
     </tr>
     
     <? 
@@ -126,8 +121,8 @@ label { font-weight:bold; }
 loader::model('user', false);
 
 $user = new User();
-$user->username = '';
-$user->email    = i_get_post('email');
+$user->user_password = i_get_post('user_password');
+$user->user_email    = i_get_post('user_email');
 
 if($user->save())
 {

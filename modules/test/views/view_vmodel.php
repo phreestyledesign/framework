@@ -39,48 +39,43 @@ label { font-weight:bold; }
 <!-- body content -->
 <h1>Welcome to Obullo Validation Model !</h1> 
 
-<div style="padding: 10px 10px 10px 0;"><? echo anchor('/test/start', 'Validation Model'); ?> | <? echo anchor('/test/start/ajax_example', 'Validation Model ( Ajax )'); ?></div>
+<div style="padding: 10px 10px 10px 0;"><?php echo anchor('/test/start', 'Validation Model'); ?> | <?php echo anchor('/test/start/ajax_example', 'Validation Model ( Ajax )'); ?></div>
 
+<?php echo form_msg($user, $msg = '', 'notification error'); ?>
 
-<? echo form_msg($user, '', 'notification error', 'notification success'); ?>
+<?php if(sess_flash('notice') != '') { ?>
+<div class="notification success"><?php echo sess_flash('notice') ?></div>
+<?php } ?>
 
 <div>
-<? echo form_open('/test/start/do_post', array('method' => 'POST', 'class' => 'no-ajax'));?>
+<?php echo form_open('/test/start/do_post', array('method' => 'POST', 'class' => 'no-ajax'));?>
 <table width="100%">
     
     <tr>
-        <td style="width:20%;"><? echo form_label('Username'); ?></td>
+        <td style="width:20%;"><?php echo form_label('Email'); ?></td>
         <td>
-        <? echo form_error('usr_username', '<div class="input-error">', '</div>'); ?>
-        <? echo form_input('usr_username', '', " id='username' ");?>
+        <?php echo form_error('user_email', '<div class="input-error">', '</div>'); ?>
+        <?php echo form_input('user_email', set_value('user_email'), " id='email' ");?>
         </td>
     </tr>
     
     <tr>
-        <td><? echo form_label('Email'); ?></td>
+        <td><?php echo form_label('Password'); ?></td>
         <td>
-        <? echo form_error('usr_email', '<div class="input-error">', '</div>'); ?>
-        <? echo form_input('usr_email', '', " id='email' ");?>
+        <?php echo form_error('user_password', '<div class="input-error">', '</div>'); ?>
+        <?php echo form_password('user_password', '', " id='password' ");?>
         </td>
     </tr>
     
     <tr>
-        <td><? echo form_label('Password'); ?></td>
+        <td><?php echo form_label('Confirm'); ?></td>
         <td>
-        <? echo form_error('usr_password', '<div class="input-error">', '</div>'); ?>
-        <? echo form_password('usr_password', '', " id='password' ");?>
+        <?php echo form_error('user_confirm_password', '<div class="input-error">', '</div>'); ?>
+        <?php echo form_password('user_confirm_password', '', " id='confirm' ");?>
         </td>
     </tr>
     
-    <tr>
-        <td><? echo form_label('Confirm'); ?></td>
-        <td>
-        <? echo form_error('usr_confirm_password', '<div class="input-error">', '</div>'); ?>
-        <? echo form_password('usr_confirm_password', '', " id='confirm' ");?>
-        </td>
-    </tr>
-    
-    <? 
+    <?php 
     //----- Captcha View ------//
     
     echo view_var('head', $row->javascript);
@@ -91,7 +86,7 @@ label { font-weight:bold; }
     
     <tr>
         <td></td>
-        <td><? echo form_submit('do_post', 'Do Post');?><font size="1"> * Please do post with blank fields and see the errors.</font></td>
+        <td><?php echo form_submit('do_post', 'Do Post');?><font size="1"> * Please do post with blank fields and see the errors.</font></td>
     </tr>
     
     <tr>
@@ -105,7 +100,6 @@ label { font-weight:bold; }
 loader::model('user', false);  // Include user model
 
 $user = new User();
-$user->usr_username = i_get_post('usr_username');
 $user->usr_password = i_get_post('usr_password');
 $user->usr_email    = i_get_post('usr_email');
 
@@ -151,7 +145,7 @@ view('layouts/vmodel'); </pre></td>
         <td><pre><?php print_r($user->values); ?></pre></td>
     </tr>
     
-    <? } ?>
+    <?php } ?>
         
     <tr>
         <td colspan="2">&nbsp;</td>
@@ -159,7 +153,7 @@ view('layouts/vmodel'); </pre></td>
     
 </table>
      
-<? echo form_close(); ?>
+<?php echo form_close(); ?>
 </div>
 
 

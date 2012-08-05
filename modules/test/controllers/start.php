@@ -43,13 +43,12 @@ Class Start extends Controller {
     }
     
     function do_post()
-    {   
+    {
         loader::model('user', false);  // Include user model
         
         $user = new User();
-        $user->usr_username = i_get_post('usr_username');
-        $user->usr_password = i_get_post('usr_password');
-        $user->usr_email    = i_get_post('usr_email');
+        $user->user_password = i_get_post('user_password');
+        $user->user_email    = i_get_post('user_email');
         
         $data['user'] = $user;  // User object for none ajax request
   
@@ -60,6 +59,12 @@ Class Start extends Controller {
                 echo form_send_success($user);
                 return;
             }
+            else
+            {
+                sess_set_flash('notice', 'Form saved succesfully !');
+                
+                redirect('/test/start');
+            }
         } 
         else
         {
@@ -69,9 +74,12 @@ Class Start extends Controller {
                 return;
             }
             
+            // debug
+            // print_r($user->errors());
+            
             //------ Hmvc call for none ajax requests -----//
         
-           $data['row'] = request('captcha/create')->decode('json')->exec();
+            $data['row'] = request('captcha/create')->decode('json')->exec();
         }
         
         view_var('body', view('view_vmodel', $data));

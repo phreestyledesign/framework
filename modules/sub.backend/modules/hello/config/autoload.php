@@ -15,7 +15,7 @@ defined('BASE') or exit('Access Denied!');
 |
 */
 
-$autoload['helper']     = array('ob/form' => '', 'ob/form_send' => '', 'ob/session' => '');
+$autoload['helper']     = array('ob/session' => '', 'ob/form' => '');
 $autoload['lib']        = array();
 $autoload['config']     = array();
 $autoload['lang']       = array();
@@ -23,4 +23,4 @@ $autoload['model']      = array();
 
 
 /* End of file autoload.php */
-/* Location: .modules/test/config/autoload.php */
+/* Location: ./modules/welcome/config/autoload.php */

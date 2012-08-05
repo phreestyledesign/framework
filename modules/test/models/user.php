@@ -19,31 +19,26 @@ Class User extends Vmodel
     public $settings = array(
     'database' => 'db',
     'table'    => 'users',
-    'primary_key' => 'usr_id',
+    'primary_key' => 'user_id',
     'fields' => array
      (
-        'usr_id' => array(
+        'user_id' => array(
           'label' => 'ID',
           'type'  => 'int',
-          'rules' => 'trim|required|integer'
+          'rules' => 'trim|integer'
         ),
-        'usr_username' => array(
-         'label'  => 'Username',  // you can use lang:username
-         'type'   => 'string',
-         'rules'  => 'required|trim|unique|min_len[3]|max_len[100]|xss_clean'
-        ),
-        'usr_password' => array(
+        'user_password' => array(
           'label' => 'Password',
           'type'  => 'string',
           'rules' => 'required|trim|min_len[6]|encrypt',
           'func'  => 'md5'
         ),
-        'usr_confirm_password' => array(
+        'user_confirm_password' => array(
           'label' => 'Confirm Password',
           'type'  => 'string',
-          'rules' => 'required|encrypt|matches[usr_password]'
+          'rules' => 'required|encrypt|matches[user_password]'
         ),
-        'usr_email' => array(
+        'user_email' => array(
           'label' => 'Email Address',
           'type'  => 'string',
           'rules' => 'required|trim|valid_emails'
