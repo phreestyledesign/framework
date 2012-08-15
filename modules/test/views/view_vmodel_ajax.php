@@ -1,4 +1,10 @@
 <?php
+//----- Captcha Js ------//
+
+view_var('head', $row->javascript);
+
+//----- Captcha Js ------//
+
 view_var('head', css('welcome.css'));
 view_var('head', js('jquery-min.js'));
 view_var('head', plugin('form'));
@@ -65,7 +71,9 @@ label { font-weight:bold; }
 ', 'embed'));
 ?>
 
-<?
+<?php echo view('../header') ?>
+
+<?php
     ##  OBULLO JQUERY FORM VALIDATION CLASS ATTRIBUTES ##
     //  
     // no-top-msg:    Hide the main jquery form error msg which is located at the top.
@@ -75,31 +83,30 @@ label { font-weight:bold; }
 
 <h1>Welcome to Obullo Validation Model !</h1> 
 
-<div style="padding: 10px 10px 10px 0;"><? echo anchor('/test/start', 'Validation Model (No Ajax)'); ?> | <? echo anchor('/test/start/ajax_example', 'Validation Model with Ajax'); ?></div>
+<div style="padding: 10px 10px 10px 0;"><?php echo anchor('/test/start', 'Validation Model (No Ajax)'); ?> | <?php echo anchor('/test/start/ajax_example', 'Validation Model with Ajax'); ?></div>
 
 <div>
-<? echo form_open('/test/start/do_post.json', array('method' => 'POST', 'class' => 'hide-form'));?>
+<?php echo form_open('/test/start/do_post.json', array('method' => 'POST', 'class' => 'hide-form'));?>
 <table width="100%">
     
     <tr>
-        <td style="width:20%;"><? echo form_label('Email'); ?></td>
-        <td><? echo form_input('user_email', '', " id='email' ");?></td>
+        <td style="width:20%;"><?php echo form_label('Email'); ?></td>
+        <td><?php echo form_input('user_email', '', " id='email' ");?></td>
     </tr>
     
     <tr>
-        <td><? echo form_label('Password'); ?></td>
-        <td><? echo form_password('user_password', '', " id='password' ");?></td>
+        <td><?php echo form_label('Password'); ?></td>
+        <td><?php echo form_password('user_password', '', " id='password' ");?></td>
     </tr>
     
     <tr>
-        <td><? echo form_label('Confirm'); ?></td>
-        <td><? echo form_password('user_confirm_password', '', " id='confirm' ");?></td>
+        <td><?php echo form_label('Confirm'); ?></td>
+        <td><?php echo form_password('user_confirm_password', '', " id='confirm' ");?></td>
     </tr>
     
-    <? 
+    <?php
     //----- Captcha Request View ------//
     
-    echo view_var('head', $row->javascript);
     echo $row->view; 
     
     //----- Captcha Request View ------//
@@ -107,7 +114,7 @@ label { font-weight:bold; }
     
     <tr>
         <td></td>
-        <td><div class="loading_div" style="float:left;"><? echo form_submit('do_post', 'Do Post', " class='button white' ");?></div></td>
+        <td><div class="loading_div" style="float:left;"><?php echo form_submit('do_post', 'Do Post', " class='button white' ");?></div></td>
     </tr>
     
     <tr>
@@ -152,3 +159,5 @@ else
 <?php echo br(); ?>
 
 <!-- end body content -->
+
+<?php echo view('../footer') ?>

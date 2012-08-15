@@ -18,28 +18,22 @@ Class Start extends Controller {
                         
         $data['user'] = array();
         
-        //------ HMVC CALL -----//
+        ## ----- HMVC CALL -----
         
         $data['row'] = request('captcha/create')->decode('json')->exec();
-
-        //------ HMVC CALL -----//
         
-        view_var('body', view('view_vmodel', $data));
-        view('layouts/vmodel'); 
+        view('view_vmodel', $data, false);
     }
     
     function ajax_example()
     {
         view_var('title', 'Welcome to Obullo Validation Model (AJAX) !');
         
-        //------ HMVC CALL -----//
+        ## ----- HMVC CALL -----
           
         $data['row'] = request('captcha/create')->decode('json')->exec();
-                
-        //------ HMVC CALL -----//
         
-        view_var('body', view('view_vmodel_ajax', $data));
-        view('layouts/vmodel');
+        view('view_vmodel_ajax', $data, false);
     }
     
     function do_post()
@@ -82,8 +76,8 @@ Class Start extends Controller {
             $data['row'] = request('captcha/create')->decode('json')->exec();
         }
         
-        view_var('body', view('view_vmodel', $data));
-        view('layouts/vmodel');
+        view('view_vmodel', $data, false);
+        
     }
     
     
@@ -109,4 +103,4 @@ Class Start extends Controller {
 }
 
 /* End of file start.php */
-/* Location: .modules/welcome/controllers/welcome.php */
+/* Location: .modules/test/controllers/start.php */

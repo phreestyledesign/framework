@@ -1,4 +1,10 @@
 <?php
+//----- Captcha Js ------//
+
+view_var('head', $row->javascript);
+
+//----- Captcha Js ------//
+
 view_var('head', css('welcome.css'));
 view_var('head', js('jquery-min.js'));
 view_var('meta', meta('keywords', 'obullo, validation model, vm, validation in model'));
@@ -35,6 +41,10 @@ label { font-weight:bold; }
 }
 ', 'embed'));
 ?>
+
+
+<?php echo view('../header') ?>
+
 
 <!-- body content -->
 <h1>Welcome to Obullo Validation Model !</h1> 
@@ -78,7 +88,6 @@ label { font-weight:bold; }
     <?php 
     //----- Captcha View ------//
     
-    echo view_var('head', $row->javascript);
     echo $row->view; 
     
     //----- Captcha View ------//
@@ -159,3 +168,5 @@ view('layouts/vmodel'); </pre></td>
 
 <?php echo br(); ?>
 <!-- body content -->
+
+<?php echo view('../footer') ?>

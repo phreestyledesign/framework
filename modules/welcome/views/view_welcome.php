@@ -3,6 +3,8 @@ view_var('head', css('welcome.css'));
 view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should set some head tags in view files. 
 ?>
 
+<?php echo view('../header') ?>
+
 <!-- body content -->
 <h1>Welcome to Obullo !</h1> 
 
@@ -46,4 +48,7 @@ view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should s
 </div> 
 
 <?php echo br(); ?>
-<!-- body content -->
+
+<!-- end body content -->
+
+<?php echo view('../footer') ?>

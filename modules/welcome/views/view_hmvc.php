@@ -1,6 +1,8 @@
 
 <?php view_var('head', css('welcome.css')); ?>
 
+<?php echo view('../header') ?>
+
 <!-- body content -->
 <h1>Welcome to Obullo HMVC !</h1>
 
@@ -43,3 +45,4 @@ $data['response_b'] = request('backend/hello/test/1/2/3')->exec();</pre></td>
 
 </table>
 
+<?php echo view('../footer') ?>
