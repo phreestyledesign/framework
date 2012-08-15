@@ -1,8 +1,11 @@
+
 <?php
 view_var('head', css('backend.css'));
-view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should set some head tags in view files.
-       
+view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should set some head tags in view files.       
 ?>
+
+<?php  
+echo view('../header') ?>
 
 <!-- body content -->
 <h1>Backend Sub Module !</h1> 
@@ -41,3 +44,5 @@ view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should s
 
 <?php echo br(); ?>
 <!-- body content -->
+
+<?php  echo view('../footer') ?>
