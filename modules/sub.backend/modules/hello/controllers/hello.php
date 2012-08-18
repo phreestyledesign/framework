@@ -23,5 +23,5 @@ Class Hello extends Controller {
     
 }
 
-/* End of file start.php */
-/* Location: .modules/welcome/controllers/welcome.php */
+/* End of file hello.php */
+/* Location: .modules/hello/controllers/hello.php */

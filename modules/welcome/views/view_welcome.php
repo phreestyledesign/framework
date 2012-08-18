@@ -18,7 +18,9 @@ view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should s
                     
                     <?php echo br(); ?>
                     
-                    <code><b>modules / welcome / views / </b><samp>layouts</samp> / welcome.php <kbd>( Layout )</kbd></code> 
+                    <code><b>modules / </b><samp>views</samp> / header.php <kbd>( View Header )</kbd></code> 
+                    
+                    <code><b>modules / </b><samp>views</samp> / footer.php <kbd>( View Footer )</kbd></code> 
                     
                     <code><b>modules / welcome / </b><samp>views</samp> / view_welcome.php <kbd>( View )</kbd></code>
                     
@@ -26,10 +28,10 @@ view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should s
                    
                     <?php echo br();  ?>
                     
-                    <div class="test"><? echo anchor('/welcome/hmvc', 'Try to New HMVC Feature'); ?></div>
-                    <div class="test"><? echo anchor('/test/start', 'Try to New Obullo Validation Model'); ?></div>
-                    <div class="test"><? echo anchor('/welcome/task', 'Try to New Task Feature'); ?></div>
-                    <div class="test"><? echo anchor('/backend', 'Try to New Sub Modules'); ?></div>
+                    <div class="test"><?php echo anchor('/welcome/hmvc', 'Try to New HMVC Feature'); ?></div>
+                    <div class="test"><?php echo anchor('/test/start', 'Try to New Validation Model'); ?></div>
+                    <div class="test"><?php echo anchor('/welcome/task', 'Try to New Task Feature'); ?></div>
+                    <div class="test"><?php echo anchor('/backend', 'Try to New Sub Modules'); ?></div>
                     
                     <?php echo br(2);  ?>
                     

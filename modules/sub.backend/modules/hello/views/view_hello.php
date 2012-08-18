@@ -20,7 +20,9 @@ echo view('../header') ?>
                     
                     <?php echo br(); ?>
                     
-                    <code><b>sub.backend / modules / views / </b><samp>layouts</samp> / layout.php <kbd>( Layout )</kbd></code> 
+                    <code><b>sub.backend / modules / </b><samp>views</samp>  / header.php <kbd>( Header View )</kbd></code> 
+                    
+                    <code><b>sub.backend / modules / </b><samp>views</samp> / footer.php <kbd>( Footer View )</kbd></code> 
                     
                     <code><b>sub.backend / modules / hello / </b><samp>views</samp> / view_hello.php <kbd>( View )</kbd></code>
                     
@@ -37,7 +39,7 @@ echo view('../header') ?>
 
 <p>
 <?php echo br(); ?>Page rendered in {elapsed_time} seconds <?php echo $var; ?> 
-<?php echo img('../welcome/gif/obullo.gif', ' border="0" '); ?>
+<?php echo img('obullo.gif', ' border="0" '); ?>
 </p>
 
 </div> 
