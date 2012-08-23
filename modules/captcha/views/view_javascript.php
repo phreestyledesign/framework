@@ -7,14 +7,13 @@
  */
 function refresh_captcha()
 {
-    $.get("<?=site_url('/captcha/create.json')?>", function(data){
+    $.get("<?php echo site_url('/captcha/create.json')?>", function(data){
 
       if(data.image != '')
       {
           $('#captcha_image').html(data.image);
       }
-
+      
     }, 'json');
-
 }
 </script>

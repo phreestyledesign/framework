@@ -26,5 +26,5 @@ defined('BASE') or exit('Access Denied!');
 |
 */
 
-$autorun['mode']  = 'replace';       // merge | replace
+$autorun['mode']      = 'replace';       // merge | replace
 $autorun['function']  = array();

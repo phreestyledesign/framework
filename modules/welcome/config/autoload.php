@@ -19,7 +19,7 @@ defined('BASE') or exit('Access Denied!');
 */
 $autoload['mode']       = 'merge'; // merge | replace
 
-$autoload['helper']     = array('ob/session' => '', 'ob/form' => '');
+$autoload['helper']     = array('ob/form' => '', 'ob/form_send' => '', 'ob/session' => '');
 $autoload['lib']        = array();
 $autoload['config']     = array();
 $autoload['lang']       = array();

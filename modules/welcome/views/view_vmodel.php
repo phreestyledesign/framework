@@ -49,7 +49,7 @@ label { font-weight:bold; }
 <!-- body content -->
 <h1>Welcome to Obullo Validation Model !</h1> 
 
-<div style="padding: 10px 10px 10px 0;"><?php echo anchor('/test/start', 'Validation Model'); ?> | <?php echo anchor('/test/start/ajax_example', 'Validation Model ( Ajax )'); ?></div>
+<div style="padding: 10px 10px 10px 0;"><?php echo anchor('/welcome/start', 'Validation Model'); ?> | <?php echo anchor('/welcome/start/ajax_example', 'Validation Model ( Ajax )'); ?></div>
 
 <?php echo form_msg($user, $msg = '', 'notification error'); ?>
 
@@ -58,7 +58,7 @@ label { font-weight:bold; }
 <?php } ?>
 
 <div>
-<?php echo form_open('/test/start/do_post', array('method' => 'POST', 'class' => 'no-ajax'));?>
+<?php echo form_open('/welcome/start/do_post', array('method' => 'POST', 'class' => 'no-ajax'));?>
 <table width="100%">
     
     <tr>

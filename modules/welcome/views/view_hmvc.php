@@ -18,7 +18,7 @@
 <pre>
 loader::helper('ob/request');
 
-$data['response_a'] = request('welcome/test/1/2/3')->exec();
+$data['response_a'] = request('welcome/start/1/2/3')->exec();
 $data['response_b'] = request('backend/hello/test/1/2/3')->exec();</pre></td>
     </tr>
 

@@ -57,7 +57,7 @@ Class Start extends Controller {
             {
                 sess_set_flash('notice', 'Form saved succesfully !');
                 
-                redirect('/test/start');
+                redirect('/welcome/start');
             }
         } 
         else

@@ -3,8 +3,12 @@ view_var('head', js(''));
 view_var('head', css(''));
 ?>
 
-<!-- body tag content -->
+<?php echo view('../header') ?>
 
-Your copy paste local view file.
+<!-- content -->
 
-<!-- body tag content -->
+Your copy default module view file.
+
+<!-- content -->
+
+<?php echo view('../footer') ?>
