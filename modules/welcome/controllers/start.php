@@ -7,9 +7,20 @@ Class Start extends Controller {
         parent::__construct();
         
         loader::helper('ob/request');
-        loader::helper('setup');
         
-        check_setup();
+        if(db_item('username') == '')
+        {
+            show_error('<b>SETUP ERROR</b> - Please create a test database called <b>obullo</b> 
+                and configure it from <b>/app/config/database.php</b>, then run the <b>test.sql</b> which is located in 
+                your <b>/modules/welcome/</b> folder');
+        }
+
+        $folder = MODULES .'captcha'. DS .config_item('public_folder'). DS . 'images'. DS;
+
+        if( ! is_really_writable($folder .'index.html'))
+        {
+            show_error('SETUP ERROR - Please set chmod settings to 777 for /modules/captcha folder: '. $folder);
+        }
     }         
 
     public function index()
@@ -68,7 +79,7 @@ Class Start extends Controller {
                 return;
             }
             
-            // debug
+            // debug On / Off
             // print_r($user->errors());
             
             //------ Hmvc call for none ajax requests -----//
