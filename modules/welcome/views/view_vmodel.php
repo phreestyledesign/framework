@@ -51,7 +51,7 @@ label { font-weight:bold; }
 
 <div style="padding: 10px 10px 10px 0;"><?php echo anchor('/welcome/start', 'Validation Model'); ?> | <?php echo anchor('/welcome/start/ajax_example', 'Validation Model ( Ajax )'); ?></div>
 
-<?php echo form_msg($user, $msg = '', 'notification error'); ?>
+<?php echo form_msg($user, $msg = '', '<div class="notification error">', '</div>'); ?>
 
 <?php if(sess_flash('notice') != '') { ?>
 <div class="notification success"><?php echo sess_flash('notice') ?></div>
