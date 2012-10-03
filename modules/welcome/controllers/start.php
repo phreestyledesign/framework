@@ -15,7 +15,7 @@ Class Start extends Controller {
                 your <b>/modules/welcome/</b> folder');
         }
 
-        $folder = MODULES .'captcha'. DS .config_item('public_folder'). DS . 'images'. DS;
+        $folder = MODULES .'captcha'. DS .config('public_folder'). DS . 'images'. DS;
 
         if( ! is_really_writable($folder .'index.html'))
         {

@@ -21,9 +21,9 @@ Class Captcha extends Controller {
 
         $vals = array(
             'max_char'   => 5,
-            'img_path'   => MODULES.'captcha'. DS .config_item('public_folder'). DS .'images'. DS,
-            'img_url'    => base_url().'modules/captcha/'.config_item('public_folder').'/images/',
-            'font_path'  => 'modules/captcha/'.config_item('public_folder').'/fonts/AHGBold.ttf',
+            'img_path'   => MODULES.'captcha'. DS .config('public_folder'). DS .'images'. DS,
+            'img_url'    => base_url().'modules/captcha/'.config('public_folder').'/images/',
+            'font_path'  => 'modules/captcha/'.config('public_folder').'/fonts/AHGBold.ttf',
             'font_size'  => 10,
             'img_width'  => 150,
             'img_height' => 40,
