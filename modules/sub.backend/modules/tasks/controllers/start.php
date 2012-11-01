@@ -18,9 +18,9 @@ Class Start extends Controller {
   /  /___/  /  / /____/  \  / /____/ / / /____   / /_____   /  /__ /  /
   /_______/   /__________/ /________/ /_______/ /_______ /  /_______/ 
   
-                Welcome to Obullo Task Manager (c) 2011.
+                Welcome to Obullo Task Manager (c) 2012.
      Please run this command [$php task.php start help] for help ! 
-               YOU ARE IN /MODULES/'.strtoupper(SUBMODULE).'/MODULES/TASKS FOLDER '."\n\n";
+               YOU ARE IN /MODULES/'.strtoupper(sub_module()).'/MODULES/TASKS FOLDER '."\n\n";
     }
     
     public function help()

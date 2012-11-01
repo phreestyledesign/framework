@@ -50,11 +50,11 @@ Class Welcome extends Controller {
         
         if($mode == 'help')
         {
-            task_run('start/help', true);  // use without true when you go live.
+            task_run('start/help', $output = true);  // use without true when you go live.
         }
         else
         {
-            task_run('start/index', true); // use without true when you go live.
+            task_run('start/index', $output = true); // use without true when you go live.
         }
     }
     
