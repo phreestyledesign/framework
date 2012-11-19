@@ -114,8 +114,7 @@ $user->usr_email    = i_get_post('usr_email');
 
 $data['user'] = $user;
 
-view_var('body', view('view_vmodel', $data));
-view('layouts/vmodel'); </pre></td>
+view('view_vmodel', $data, false);</pre></td>
     </tr>
     
     
