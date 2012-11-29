@@ -15,10 +15,14 @@ defined('BASE') or exit('Access Denied!');
 | Prototype:  ./modules/sub.module/config/autoload.php
 |
 */
+$autoload['helper']['ob/view'] = '';
+$autoload['helper']['ob/html'] = '';
+$autoload['helper']['ob/url']  = '';
+$autoload['helper']['ob/form'] = '';
+$autoload['helper']['ob/session'] = '';
 
-
-$autoload['helper']     = array('ob/view' => '', 'ob/html' => '', 'ob/url' => '', 'ob/form' => '');
-$autoload['lib']        = array();
+$autoload['lib']['ob/auth']   = array(array('module' => 'sub.backend'));
+$autoload['lib']['ob/navbar'] = array(array('module' => 'sub.backend'));
 $autoload['config']     = array();
 $autoload['lang']       = array();
 $autoload['model']      = array();
