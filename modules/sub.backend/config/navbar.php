@@ -23,8 +23,8 @@ $navbar['sub_inactive_class'] = 'navbar-sub-inactive';
 | Top Levels
 |--------------------------------------------------------------------------
 |
-| $navbar['top_level']['users']    = array('label' => 'Members', 'url' => 'backend/users/list_all');
-| $navbar['top_level']['articles'] = array('label' => 'Articles', 'url' => 'backend/articles/list_all');
+| $navbar['top_level'][]['users']    = array('label' => 'Members', 'url' => 'backend/users/list_all');
+| $navbar['top_level'][]['articles'] = array('label' => 'Articles', 'url' => 'backend/articles/list_all');
 |
 */
 $navbar['top_level'][]['users'] = array('label' => 'Members', 'url' => 'backend/users/list_all');
