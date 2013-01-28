@@ -35,8 +35,8 @@ Class Hello extends Controller {
         echo "argument when you go LIVE server ! .".br().".e.g. task_run('backend/controller/method', false);";
         echo "<font>";
 
-        task_run('backend/start/index', $output = true); // use without true when you go live.
-        
+        $output = task_run('backend/start/index', $output = true); // use without true when you go live.
+        echo '<pre>'.$output.'</pre>';
     }
     
 }
