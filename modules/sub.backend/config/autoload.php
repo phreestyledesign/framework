@@ -21,8 +21,9 @@ $autoload['helper']['ob/url']  = '';
 $autoload['helper']['ob/form'] = '';
 $autoload['helper']['ob/session'] = '';
 
-$autoload['lib']['ob/auth']   = array(array('module' => 'sub.backend'));
-$autoload['lib']['ob/navbar'] = array(array('module' => 'sub.backend'));
+// $autoload['lib']['ob/auth']   = array(array('module' => 'sub.backend'));
+// $autoload['lib']['ob/navbar'] = array(array('module' => 'sub.backend'));
+
 $autoload['config']     = array();
 $autoload['lang']       = array();
 $autoload['model']      = array();
