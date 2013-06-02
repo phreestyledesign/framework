@@ -1,11 +1,11 @@
-<?php
-view_var('head', css('welcome.css'));
-view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should set some head tags in view files. 
-?>
-
-<?php echo view('../header') ?>
-
-<!-- body content -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Welcome to Obullo !</title>
+<?php echo css('welcome.css') ?>
+</head>
+<body>
+    
 <h1>Welcome to Obullo !</h1> 
 
 <div id="main">
@@ -17,8 +17,6 @@ view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should s
                     <p>If you would like to edit <b>Welcome Module</b> you'll find files located at</p>
                     
                     <?php echo br(); ?>
-                    
-                    <code><b>modules / </b><samp>views</samp> / header.php <kbd>( View Header )</kbd></code> 
                     
                     <code><b>modules / </b><samp>views</samp> / footer.php <kbd>( View Footer )</kbd></code> 
                     
@@ -42,15 +40,11 @@ view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should s
           </div> 
     </div> 
 
-<p>
-<?php echo br(); ?>Page rendered in {elapsed_time} seconds <?php echo $var; ?> 
-<?php echo img('obullo.gif', ' border="0" '); ?>
-</p>
+<?php echo view('../footer') ?>
 
 </div> 
 
-<?php echo br(); ?>
+<?php echo br() ?>
 
-<!-- end body content -->
-
-<?php echo view('../footer') ?>
+</body>
+</html>

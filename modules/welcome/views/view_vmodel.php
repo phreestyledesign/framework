@@ -1,17 +1,14 @@
-<?php
-//----- Captcha Js ------//
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Welcome to Validation Model !</title>
 
-view_var('head', $row->javascript);
+<?php echo css('welcome.css') ?>
+<?php echo js('jquery-min.js') ?>
 
-//----- Captcha Js ------//
-
-view_var('head', css('welcome.css'));
-view_var('head', js('jquery-min.js'));
-view_var('meta', meta('keywords', 'obullo, validation model, vm, validation in model'));
-view_var('head', css('
+<style type="text/css">
 label { font-weight:bold; }
 .input-error { color: #DF4545; }
-
 .notification {
   max-width: 800px;
   border:1px solid;
@@ -22,9 +19,7 @@ label { font-weight:bold; }
   font-weight:bold;
   font-size: 16px;
 }
-
 .notification h1 { margin-bottom: 5px; }
-
 .notification.success {
   border-color: #E6DB55;
   background-color: #FFFFE0;
@@ -32,21 +27,16 @@ label { font-weight:bold; }
   color: #000;
   background-position:0px 1px
 }
-
 .notification.error {
   border-color: #DF4545;
   background-color: #FFEBE8;
   color: #000;
   background-position:0 -7055px;
-}
-', 'embed'));
-?>
-
-
-<?php echo view('../header') ?>
-
-
-<!-- body content -->
+}   
+</style>
+</head>
+    
+<body>
 <h1>Welcome to Obullo Validation Model !</h1> 
 
 <div style="padding: 10px 10px 10px 0;"><?php echo anchor('/welcome/start', 'Validation Model'); ?> | <?php echo anchor('/welcome/start/ajax_example', 'Validation Model ( Ajax )'); ?></div>
@@ -85,14 +75,6 @@ label { font-weight:bold; }
         </td>
     </tr>
     
-    <?php 
-    //----- Captcha View ------//
-    
-    echo $row->view; 
-    
-    //----- Captcha View ------//
-    ?>
-    
     <tr>
         <td></td>
         <td><?php echo form_submit('do_post', 'Do Post');?><font size="1"> * Please do post with blank fields and see the errors.</font></td>
@@ -105,16 +87,17 @@ label { font-weight:bold; }
     <tr>
         <td><b>Code</b></td>
         <td>
-<pre>
-loader::model('user', false);  // Include user model
+        <pre>
+        loader::model('user', false);  // Include user model
 
-$user = new User();
-$user->usr_password = i_get_post('usr_password');
-$user->usr_email    = i_get_post('usr_email');
+        $user = new User();
+        $user->usr_password = i_get_post('usr_password');
+        $user->usr_email    = i_get_post('usr_email');
 
-$data['user'] = $user;
+        $data['user'] = $user;
 
-view('view_vmodel', $data, false);</pre></td>
+        view('view_vmodel', $data, false);</pre>
+        </td>
     </tr>
     
     
@@ -164,8 +147,7 @@ view('view_vmodel', $data, false);</pre></td>
 <?php echo form_close(); ?>
 </div>
 
-
 <?php echo br(); ?>
-<!-- body content -->
-
 <?php echo view('../footer') ?>
+</body>
+</html>

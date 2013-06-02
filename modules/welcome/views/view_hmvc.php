@@ -1,7 +1,12 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Welcome to HMVC !</title>
 
-<?php view_var('head', css('welcome.css')); ?>
+<?php echo css('welcome.css') ?>
 
-<?php echo view('../header') ?>
+</head>
+<body>
 
 <!-- body content -->
 <h1>Welcome to Obullo HMVC !</h1>
@@ -45,4 +50,5 @@ $data['response_b'] = request('backend/hello/test/1/2/3')->exec();</pre></td>
 
 </table>
 
-<?php echo view('../footer') ?>
+</body>
+</html>

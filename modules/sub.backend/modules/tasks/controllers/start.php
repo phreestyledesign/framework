@@ -9,8 +9,8 @@ Class Start extends Controller {
     }         
     
     public function index()
-    {    
-        echo '
+    {
+       echo "\033[36m".'
         _____      ________     __     __  __        __          _______
       / ___  /    / ____   \   / /    / / / /       / /         / ___   /
     /  /   /  /  / /____/  /  / /    / / / /       / /        /  /   /  /
@@ -18,9 +18,9 @@ Class Start extends Controller {
   /  /___/  /  / /____/  \  / /____/ / / /____   / /_____   /  /__ /  /
   /_______/   /__________/ /________/ /_______/ /_______ /  /_______/ 
   
-                Welcome to Obullo Task Manager (c) 2012.
-     Please run this command [$php task.php start help] for help ! 
-               YOU ARE IN /MODULES/'.strtoupper(sub_module()).'/MODULES/TASKS FOLDER '."\n\n";
+                Welcome to Obullo Task Manager (c) 2013
+ Please run '."\033[31m".'[$php task.php start help] '."\033[0m"."\033[31m".'You are in /MODULES/'.strtoupper(sub_module()).'/MODULES/TASKS FOLDER '."\033[0m";
+        
     }
     
     public function help()

@@ -5,15 +5,6 @@ Class User extends Vmodel
     function __construct()
     {
         parent::__construct();
-        
-        $this->settings['fields']['captcha_answer'] = array(
-          'label' => 'Security Image',
-          'type'  => 'string',
-          'rules' => 'trim|required|integer|min_len[1]|max_len[5]|callback_request[post][captcha/check]'
-        );
-        
-        // !! WHAT IS THE CALLBACK REQUEST : callback_request[post][/captcha/check/] is a rule that is do a hmvc request
-        // to /captcha module. Look at the captcha module for more details.
     }
     
     public $settings = array(
@@ -41,7 +32,7 @@ Class User extends Vmodel
         'user_email' => array(
           'label' => 'Email Address',
           'type'  => 'string',
-          'rules' => 'required|trim|valid_emails'
+          'rules' => 'required|trim|valid_email'
         )
         
     ));
@@ -70,6 +61,5 @@ Class User extends Vmodel
     
 }
 
-
-/* End of file start.php */
-/* Location: .modules/test/controllers/vm/start.php */
+/* End of file User.php */
+/* Location: .modules/welcome/models/user.php */
