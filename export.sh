@@ -33,4 +33,4 @@ cd $EXPORT_FOLDER
 rm -rf `find . -type d -name .svn`
 rm -rf `find . -type d -name .git`
 
-echo "Export process named as $EXPORT_FOLDER and completed !"
+echo "\33[0;32mExport process named as $EXPORT_FOLDER and completed !\33[0m"

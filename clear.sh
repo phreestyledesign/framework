@@ -14,7 +14,6 @@ if [ ! -d obullo ]; then
 fi
 
 # define your paths.
-CAPTCHA_DIR="$PROJECT_DIR/modules/captcha/assets/images/"
 APP_LOG_DIR="$PROJECT_DIR/app/core/logs/"
 MOD_LOG_DIR="$PROJECT_DIR/modules/"
 
@@ -23,7 +22,4 @@ MOD_LOG_DIR="$PROJECT_DIR/modules/"
 find $APP_LOG_DIR -name 'log-*.php' -exec rm -rf {} \;
 find $MOD_LOG_DIR -name 'log-*.php' -exec rm -rf {} \;
 
-# force delete captcha images.
-find $CAPTCHA_DIR -name '*.jpg' -exec rm -rf {} \;
-
-echo "Great, temporary files clear job done !"
+echo "\33[0;32mGreat, temporary files clear job done !\33[0m"

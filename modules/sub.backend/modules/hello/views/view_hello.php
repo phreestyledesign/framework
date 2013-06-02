@@ -1,11 +1,10 @@
-
-<?php
-view_var('head', css('backend.css'));
-view_var('meta', meta('keywords', 'obullo, php5, framework'));   // You should set some head tags in view files.       
-?>
-
-<?php  
-echo view('../header') ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Welcome to Backend !</title>
+<?php echo css('backend.css') ?>
+</head>
+<body>
 
 <!-- body content -->
 <h1>Backend Sub Module !</h1> 
@@ -20,10 +19,6 @@ echo view('../header') ?>
                     
                     <?php echo br(); ?>
                     
-                    <code><b>sub.backend / modules / </b><samp>views</samp>  / header.php <kbd>( Header View )</kbd></code> 
-                    
-                    <code><b>sub.backend / modules / </b><samp>views</samp> / footer.php <kbd>( Footer View )</kbd></code> 
-                    
                     <code><b>sub.backend / modules / hello / </b><samp>views</samp> / view_hello.php <kbd>( View )</kbd></code>
                     
                     <code><b>sub.backend / modules / hello / </b><samp>controllers</samp> / hello.php <kbd>( Controller )</kbd></code>
@@ -37,14 +32,8 @@ echo view('../header') ?>
           </div> 
     </div> 
 
-<p>
-<?php echo br(); ?>Page rendered in {elapsed_time} seconds <?php echo $var; ?> 
-<?php echo img('obullo.gif', ' border="0" '); ?>
-</p>
-
 </div> 
 
 <?php echo br(); ?>
-<!-- body content -->
-
-<?php  echo view('../footer') ?>
+</body>
+</html>
