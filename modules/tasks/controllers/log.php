@@ -8,9 +8,9 @@ Class Log extends Controller {
         parent::__construct();
     }         
     
-    public function index($arg = '')
+    public function index($level = '')
     {   
-        if($arg == '')
+        if($level == '')
         {
         echo '
         _____      ________     __     __  __        __          _______
@@ -21,12 +21,17 @@ Class Log extends Controller {
   /_______/   /__________/ /________/ /_______/ /_______ /  /_______/ 
   
                        Welcome to Log Manager (c) 2013
- Please run '."\033[34m".'[$php task.php log app level debug]'."\033[0m".' or '."\033[34m".'[$php task.php log yourmodule]'."\033[0m\n\n";
+ Please run '."\033[34m".'[$php task.php log level all]'."\033[0m".' log levels'."\033[34m".' all | debug | error | info '."\033[0m\n\n";
         } 
         else 
         {
             $this->_follow(APP.'core'. DS .'logs'. DS .'log-'.date('Y-m-d').'.php');
         }
+    }
+    
+    public function level($level = 'all')
+    {
+        $this->index($level);
     }
     
     /**
