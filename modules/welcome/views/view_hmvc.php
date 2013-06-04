@@ -7,7 +7,7 @@
 
 </head>
 <body>
-
+    
 <!-- body content -->
 <h1>Welcome to Obullo HMVC !</h1>
 
